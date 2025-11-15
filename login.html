@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Negombo Grand Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="member-application.html">Member Application</a></li>
+                            <li><a href="family-registration.html">Register My Family</a></li>
+                            <li><a href="zakath-application.html">Zakath Application</a></li>
+                            <li><a href="marriage-application.html">Marriage Application</a></li>
+                            <li><a href="janaza-application.html">Janaza Application</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="masjids.html">Our Masjids</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login active">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Member Login</h1>
+            <p>Access your account and services</p>
+        </div>
+    </section>
+
+    <!-- Login Form -->
+    <section class="login-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Login to Your Account</h2>
+                <p class="form-description">Access member services, applications, and community features</p>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password *</label>
+                        <input type="password" name="password" required placeholder="Enter your password">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            Remember me
+                        </label>
+                        <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Login</button>
+
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="btn-google">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                    </div>
+                </form>
+
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="register.html">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Benefits -->
+    <section class="login-benefits">
+        <div class="container">
+            <h2 class="section-title">Member Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Online Applications</h3>
+                    <p>Submit and track applications for various services online</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Event Registration</h3>
+                    <p>Register for community events and programs</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Notifications</h3>
+                    <p>Receive important updates and announcements</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Access</h3>
+                    <p>Connect with other community members</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In production: Validate and send to server
+            alert('Login functionality would be implemented here. In production, this would authenticate with the server.');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Application - Negombo Grand Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="member-application.html" class="active">Member Application</a></li>
+                            <li><a href="family-registration.html">Register My Family</a></li>
+                            <li><a href="zakath-application.html">Zakath Application</a></li>
+                            <li><a href="marriage-application.html">Marriage Application</a></li>
+                            <li><a href="janaza-application.html">Janaza Application</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="masjids.html">Our Masjids</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Member Application</h1>
+            <p>Join our community as an official member</p>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Member Registration Form</h2>
+                <p class="form-description">Please fill out this form completely to register as a member of Negombo Grand Masjid.</p>
+                
+                <form id="memberApplicationForm">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name (as per NIC) *</label>
+                                <input type="text" name="full_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>NIC Number *</label>
+                                <input type="text" name="nic_number" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Date of Birth *</label>
+                                <input type="date" name="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Gender *</label>
+                                <select name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Contact Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Residential Address *</label>
+                            <textarea name="address" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Masjid Information</h3>
+                        <div class="form-group">
+                            <label>Preferred Masjid *</label>
+                            <select name="preferred_masjid" required>
+                                <option value="">Select Your Local Masjid</option>
+                                <option value="grand">Negombo Grand Masjid (Main)</option>
+                                <option value="almadina">Al-Madina Masjid (Kochchikade)</option>
+                                <option value="usman">Masjid Usman (Eththukala)</option>
+                                <option value="jumma">Jumma Masjid (Downtown)</option>
+                                <option value="abuBakr">Masjid Abu Bakr (Sea Street)</option>
+                                <option value="umar">Masjid Umar (Kandawala)</option>
+                                <option value="uthman">Masjid Uthman (Dungalpitiya)</option>
+                                <option value="ali">Masjid Ali (Kurana)</option>
+                                <option value="hamza">Masjid Hamza (Maha Oya)</option>
+                                <option value="bilal">Masjid Bilal (Pamunugama)</option>
+                                <option value="ayub">Masjid Ayub (Kochchikade South)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Family Information</h3>
+                        <div class="form-group">
+                            <label>Are you registering with family members?</label>
+                            <select name="with_family" id="withFamily">
+                                <option value="no">No, individual registration</option>
+                                <option value="yes">Yes, I will register family members</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Declaration</h3>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="declaration" required>
+                                I hereby declare that the information provided is true and correct. I agree to abide by the rules and regulations of Negombo Grand Masjid.
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Submit Application</button>
+                        <button type="button" class="btn-secondary" onclick="generatePDF()">Download PDF Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function generatePDF() {
+            alert('PDF generation would be implemented here. In production, this would generate a downloadable PDF form.');
+            // In production: window.print() or use a PDF library like jsPDF
+        }
+
+        document.getElementById('memberApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Application submitted successfully! We will contact you soon.');
+            // In production: Send form data to server
+        });
+    </script>
+</body>
+</html>

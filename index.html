@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negombo Grand Masjid - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="member-application.html">Member Application</a></li>
+                            <li><a href="family-registration.html">Register My Family</a></li>
+                            <li><a href="zakath-application.html">Zakath Application</a></li>
+                            <li><a href="marriage-application.html">Marriage Application</a></li>
+                            <li><a href="janaza-application.html">Janaza Application</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="masjids.html">Our Masjids</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <div class="masjid-image" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #1a5e1a;">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <div class="slide-content">
+                    <h2>Negombo Grand Masjid</h2>
+                    <p>Main Center - Serving Since 1970 | 150+ Families</p>
+                    <a href="masjids.html" class="btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="masjid-image" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #2d7a2d;">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <div class="slide-content">
+                    <h2>Al-Madina Masjid</h2>
+                    <p>Kochchikade Branch - 80+ Families</p>
+                    <a href="masjids.html" class="btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="masjid-image" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #1a5e1a;">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <div class="slide-content">
+                    <h2>Masjid Usman</h2>
+                    <p>Eththukala Branch - 60+ Families</p>
+                    <a href="masjids.html" class="btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots"></div>
+    </section>
+
+    <!-- Quick Access -->
+    <section class="quick-access">
+        <div class="container">
+            <h2 class="section-title">Quick Access</h2>
+            <div class="access-grid">
+                <div class="access-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Member Registration</h3>
+                    <p>Register as a member of our community</p>
+                    <a href="member-application.html" class="btn-primary">Register Now</a>
+                </div>
+                <div class="access-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Family Registration</h3>
+                    <p>Register your family with our masjid</p>
+                    <a href="family-registration.html" class="btn-primary">Register Family</a>
+                </div>
+                <div class="access-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Zakath Services</h3>
+                    <p>Zakath calculation and distribution</p>
+                    <a href="zakath-application.html" class="btn-primary">Learn More</a>
+                </div>
+                <div class="access-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Marriage Services</h3>
+                    <p>Nikah ceremonies and counseling</p>
+                    <a href="marriage-application.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Calendar -->
+    <section class="prayer-calendar">
+        <div class="container">
+            <h2 class="section-title">Monthly Prayer Times</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h3>Colombo Prayer Times - <span id="currentMonth"></span></h3>
+                    <p>Automatically updated for Colombo timezone</p>
+                </div>
+                <div id="prayerCalendar">
+                    <!-- JavaScript will populate this -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Preview -->
+    <section class="events-preview">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">OCT</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Quran Competition</h3>
+                        <p><i class="far fa-clock"></i> 10:00 AM - 2:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Main Hall</p>
+                        <p>Annual Quran recitation competition for all age groups</p>
+                        <a href="events.html" class="btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">OCT</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Community Dinner</h3>
+                        <p><i class="far fa-clock"></i> 6:00 PM - 9:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Masjid Courtyard</p>
+                        <p>Monthly community gathering with dinner</p>
+                        <a href="events.html" class="btn-primary">RSVP Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="events.html" class="btn-secondary">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set current month in calendar header
+        document.addEventListener('DOMContentLoaded', function() {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+            const currentMonth = new Date().getMonth();
+            document.getElementById('currentMonth').textContent = months[currentMonth];
+        });
+    </script>
+</body>
+</html>

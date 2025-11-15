@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Negombo Grand Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="member-application.html">Member Application</a></li>
+                            <li><a href="family-registration.html">Register My Family</a></li>
+                            <li><a href="zakath-application.html">Zakath Application</a></li>
+                            <li><a href="marriage-application.html">Marriage Application</a></li>
+                            <li><a href="janaza-application.html">Janaza Application</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="masjids.html">Our Masjids</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Feedback & Complaints</h1>
+            <p>Your voice helps us improve our services</p>
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section class="feedback-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Share Your Feedback</h2>
+                <p class="form-description">We value your opinions and suggestions. Please use this form to share your feedback, suggestions, or report any concerns about our services.</p>
+                
+                <form id="feedbackForm">
+                    <div class="form-section">
+                        <h3>Your Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label>Are you a member?</label>
+                                <select name="is_member">
+                                    <option value="">Select</option>
+                                    <option value="yes">Yes, registered member</option>
+                                    <option value="no">No, not a member</option>
+                                    <option value="family">Family member of registered member</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Feedback Details</h3>
+                        <div class="form-group">
+                            <label>Feedback Type *</label>
+                            <select name="feedback_type" required>
+                                <option value="">Select Type</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="compliment">Compliment</option>
+                                <option value="general">General Feedback</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Related Masjid</label>
+                            <select name="related_masjid">
+                                <option value="">Select Masjid (if applicable)</option>
+                                <option value="grand">Negombo Grand Masjid (Main)</option>
+                                <option value="almadina">Al-Madina Masjid</option>
+                                <option value="usman">Masjid Usman</option>
+                                <option value="jumma">Jumma Masjid</option>
+                                <option value="all">All Masjids</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject *</label>
+                            <input type="text" name="subject" required placeholder="Brief description of your feedback">
+                        </div>
+                        <div class="form-group">
+                            <label>Detailed Feedback *</label>
+                            <textarea name="message" rows="8" required placeholder="Please provide detailed feedback or describe your concern..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Confidentiality</h3>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="confidential" required>
+                                I understand that this feedback will be handled confidentially and used to improve our services
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="contact_me">
+                                You may contact me for follow-up regarding this feedback
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Submit Feedback</button>
+                        <button type="reset" class="btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Guidelines -->
+    <section class="feedback-guidelines">
+        <div class="container">
+            <h2 class="section-title">Feedback Guidelines</h2>
+            <div class="guidelines-grid">
+                <div class="guideline-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Response Time</h3>
+                    <p>We aim to respond to all feedback within 3-5 working days. Urgent matters will be prioritized.</p>
+                </div>
+                <div class="guideline-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Confidentiality</h3>
+                    <p>All feedback is treated confidentially. Your personal information will be protected.</p>
+                </div>
+                <div class="guideline-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Constructive Feedback</h3>
+                    <p>We appreciate constructive feedback that helps us improve our services and community.</p>
+                </div>
+                <div class="guideline-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Follow-up</h3>
+                    <p>For complex issues, we may contact you for additional information or clarification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Notice -->
+    <section class="emergency-notice">
+        <div class="container">
+            <div class="notice-alert">
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="alert-content">
+                    <h3>Urgent Matters</h3>
+                    <p>For urgent complaints or emergency situations, please contact our emergency numbers directly:</p>
+                    <div class="emergency-contacts">
+                        <p><i class="fas fa-phone"></i> President: +94 77 123 4567</p>
+                        <p><i class="fas fa-phone"></i> Secretary: +94 77 234 5678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your feedback! We appreciate your input and will review it carefully.');
+            this.reset();
+            // In production: Send feedback data to server
+        });
+    </script>
+</body>
+</html>
