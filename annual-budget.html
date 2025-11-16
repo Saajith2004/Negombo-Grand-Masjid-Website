@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Budget - Negombo Grand Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Register My Family</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Application</a></li>
+                        <li><a href="janaza-application.html">Janaza Application</a></li>
+                    </ul>
+                </li>
+                <li><a href="masjids.html">Our Masjids</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>  
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="budget-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Annual Budget & Financial Report</h1>
+                    <p>Transparent financial management for our community</p>
+                    <div class="budget-summary">
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h3 id="totalBudget">LKR 8,500,000</h3>
+                                <p>Total Annual Budget</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h3 id="totalExpenses">LKR 6,200,000</h3>
+                                <p>Projected Expenses</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h3 id="totalIncome">LKR 7,800,000</h3>
+                                <p>Projected Income</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Budget Overview -->
+        <section class="budget-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Budget Overview 2024</h2>
+                    <p>Financial planning for our community services and maintenance</p>
+                </div>
+                
+                <div class="budget-charts">
+                    <div class="chart-container">
+                        <div class="chart-card">
+                            <h3>Income Sources</h3>
+                            <div class="chart" id="incomeChart">
+                                <canvas id="incomePieChart"></canvas>
+                            </div>
+                            <div class="chart-legend" id="incomeLegend"></div>
+                        </div>
+                        
+                        <div class="chart-card">
+                            <h3>Expense Distribution</h3>
+                            <div class="chart" id="expenseChart">
+                                <canvas id="expensePieChart"></canvas>
+                            </div>
+                            <div class="chart-legend" id="expenseLegend"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="budget-comparison">
+                    <h3>Budget vs Actual (Last 6 Months)</h3>
+                    <div class="comparison-chart">
+                        <canvas id="budgetComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Budget Sections -->
+        <section class="detailed-budget">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Detailed Budget Breakdown</h2>
+                    <p>Comprehensive financial allocation for each department</p>
+                </div>
+
+                <div class="budget-tabs">
+                    <div class="tab-headers">
+                        <button class="tab-header active" data-tab="income">Income Sources</button>
+                        <button class="tab-header" data-tab="expenses">Expense Categories</button>
+                        <button class="tab-header" data-tab="projects">Major Projects</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Income Tab -->
+                        <div class="tab-pane active" id="income-tab">
+                            <div class="budget-table-container">
+                                <table class="budget-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Income Source</th>
+                                            <th>Amount (LKR)</th>
+                                            <th>Percentage</th>
+                                            <th>Trend</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Monthly Donations</td>
+                                            <td>3,500,000</td>
+                                            <td>45%</td>
+                                            <td><span class="trend up"><i class="fas fa-arrow-up"></i> 12%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zakath Collections</td>
+                                            <td>1,800,000</td>
+                                            <td>23%</td>
+                                            <td><span class="trend up"><i class="fas fa-arrow-up"></i> 8%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bitulmahal Fund</td>
+                                            <td>950,000</td>
+                                            <td>12%</td>
+                                            <td><span class="trend stable"><i class="fas fa-minus"></i> 2%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Event Fundraising</td>
+                                            <td>750,000</td>
+                                            <td>10%</td>
+                                            <td><span class="trend up"><i class="fas fa-arrow-up"></i> 15%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Other Sources</td>
+                                            <td>800,000</td>
+                                            <td>10%</td>
+                                            <td><span class="trend down"><i class="fas fa-arrow-down"></i> 5%</span></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><strong>Total Income</strong></td>
+                                            <td><strong>7,800,000</strong></td>
+                                            <td><strong>100%</strong></td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Expenses Tab -->
+                        <div class="tab-pane" id="expenses-tab">
+                            <div class="budget-table-container">
+                                <table class="budget-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Expense Category</th>
+                                            <th>Amount (LKR)</th>
+                                            <th>Percentage</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Masjid Maintenance</td>
+                                            <td>1,800,000</td>
+                                            <td>29%</td>
+                                            <td><span class="status on-track">On Track</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Utilities & Bills</td>
+                                            <td>950,000</td>
+                                            <td>15%</td>
+                                            <td><span class="status on-track">On Track</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Community Services</td>
+                                            <td>1,200,000</td>
+                                            <td>19%</td>
+                                            <td><span class="status over-budget">Over Budget</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Educational Programs</td>
+                                            <td>850,000</td>
+                                            <td>14%</td>
+                                            <td><span class="status under-budget">Under Budget</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bitulmahal Projects</td>
+                                            <td>750,000</td>
+                                            <td>12%</td>
+                                            <td><span class="status on-track">On Track</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Administrative Costs</td>
+                                            <td>650,000</td>
+                                            <td>11%</td>
+                                            <td><span class="status on-track">On Track</span></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><strong>Total Expenses</strong></td>
+                                            <td><strong>6,200,000</strong></td>
+                                            <td><strong>100%</strong></td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Projects Tab -->
+                        <div class="tab-pane" id="projects-tab">
+                            <div class="projects-grid">
+                                <div class="project-card">
+                                    <div class="project-header">
+                                        <h4>New Masjid Construction</h4>
+                                        <span class="budget-amount">LKR 2,500,000</span>
+                                    </div>
+                                    <div class="project-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                        </div>
+                                        <span class="progress-text">65% Complete</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p>Construction of new masjid in Negombo East area to serve growing community</p>
+                                        <div class="project-meta">
+                                            <span><i class="fas fa-calendar"></i> Jan 2024 - Dec 2024</span>
+                                            <span><i class="fas fa-users"></i> Community Project</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-header">
+                                        <h4>Renovation Project</h4>
+                                        <span class="budget-amount">LKR 1,200,000</span>
+                                    </div>
+                                    <div class="project-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 90%"></div>
+                                        </div>
+                                        <span class="progress-text">90% Complete</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p>Renovation of main prayer hall and facilities at Grand Masjid</p>
+                                        <div class="project-meta">
+                                            <span><i class="fas fa-calendar"></i> Mar 2024 - Aug 2024</span>
+                                            <span><i class="fas fa-users"></i> Maintenance</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-header">
+                                        <h4>Educational Center</h4>
+                                        <span class="budget-amount">LKR 800,000</span>
+                                    </div>
+                                    <div class="project-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 30%"></div>
+                                        </div>
+                                        <span class="progress-text">30% Complete</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p>Establishment of Islamic education center for children and adults</p>
+                                        <div class="project-meta">
+                                            <span><i class="fas fa-calendar"></i> Jun 2024 - Dec 2024</span>
+                                            <span><i class="fas fa-users"></i> Education</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Reports -->
+        <section class="financial-reports">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Financial Reports & Documents</h2>
+                    <p>Download detailed financial reports and statements</p>
+                </div>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Annual Budget 2024</h4>
+                            <p>Complete detailed budget for fiscal year 2024</p>
+                            <a href="#" class="download-btn">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Q2 Financial Report</h4>
+                            <p>Second quarter financial performance report</p>
+                            <a href="#" class="download-btn">
+                                <i class="fas fa-download"></i> Download Excel
+                            </a>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Audit Report 2023</h4>
+                            <p>Independent audit report for previous year</p>
+                            <a href="#" class="download-btn">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Financial Committee -->
+        <section class="financial-contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-content">
+                        <h3>Questions about our Budget?</h3>
+                        <p>Our financial committee is available to answer any questions about our budget, expenses, or financial transparency.</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> finance@negombomasjid.org</p>
+                            <p><i class="fas fa-phone"></i> +94 31 223 4567 (Ext. 2)</p>
+                        </div>
+                    </div>
+                    <div class="contact-action">
+                        <a href="contact.html" class="btn btn-primary">Contact Finance Committee</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

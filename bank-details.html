@@ -26,6 +26,7 @@
             </div>
         </div>
     </header>
+    
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
@@ -59,65 +60,199 @@
             </div>
         </div>
     </nav>  
+    
     <!-- Main Content -->
     <main>
-        <section class="general-bank-details-section">
+        <div class="page-header">
             <div class="container">
-                <h2>General Bank Details</h2>
-                <p>For donations and financial support, please use the following bank details:</p>
-                <ul class="bank-details-list">
-                    <li><strong>Bank Name:</strong> ABC Bank</li>
-                    <li><strong>Account Name:</strong> Negombo Grand Masjid</li>
-                    <li><strong>Account Number:</strong> 1234567890</li>
-                    <li><strong>SWIFT Code:</strong> ABCD1234</li>
-                    <li><strong>Branch:</strong> Negombo Main Branch</li>
-                </ul>
-                <p>Please ensure to include your name and purpose of donation in the transaction reference.</p>
+                <h1>Bank Account Details</h1>
+                <p>For donations and financial support to Negombo Grand Masjid</p>
             </div>
-        </section>
-        <section class="bitulmahal-bank-details-section">
-            <div class="container">
-                <h2>Bitulmahal Bank Details</h2>
-                <p>For bitulmahal related transactions, please use the following details:</p>
-                <ul class="bank-details-list">
-                    <li><strong>Bank Name:</strong> XYZ Bank</li>
-                    <li><strong>Account Name:</strong> Negombo Grand Masjid - Bitulmahal</li>
-                    <li><strong>Account Number:</strong> 0987654321</li>
-                    <li><strong>SWIFT Code:</strong> WXYZ5678</li>
-                    <li><strong>Branch:</strong> Negombo Central Branch</li>
-                </ul>
-                <p>Kindly mention "Bitulmahal" in the transaction reference for proper allocation.</p>
+        </div>
+        
+        <div class="container">
+            <div class="bank-cards-container">
+                <div class="bank-card">
+                    <div class="card-header">
+                        <i class="fas fa-university"></i>
+                        <h2>General Donations</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="bank-details-list">
+                            <li>
+                                <span class="detail-label">Bank Name:</span>
+                                <span class="detail-value">ABC Bank</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Name:</span>
+                                <span class="detail-value">Negombo Grand Masjid</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Number:</span>
+                                <span class="detail-value">1234567890</span>
+                                <button class="copy-btn" data-text="1234567890">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">SWIFT Code:</span>
+                                <span class="detail-value">ABCD1234</span>
+                                <button class="copy-btn" data-text="ABCD1234">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">Branch:</span>
+                                <span class="detail-value">Negombo Main Branch</span>
+                            </li>
+                        </ul>
+                        <div class="note">
+                            <p><i class="fas fa-info-circle"></i> Please include your name and purpose of donation in the transaction reference.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bank-card">
+                    <div class="card-header">
+                        <i class="fas fa-home"></i>
+                        <h2>Bitulmahal Fund</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="bank-details-list">
+                            <li>
+                                <span class="detail-label">Bank Name:</span>
+                                <span class="detail-value">XYZ Bank</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Name:</span>
+                                <span class="detail-value">Negombo Grand Masjid - Bitulmahal</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Number:</span>
+                                <span class="detail-value">0987654321</span>
+                                <button class="copy-btn" data-text="0987654321">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">SWIFT Code:</span>
+                                <span class="detail-value">WXYZ5678</span>
+                                <button class="copy-btn" data-text="WXYZ5678">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">Branch:</span>
+                                <span class="detail-value">Negombo Central Branch</span>
+                            </li>
+                        </ul>
+                        <div class="note">
+                            <p><i class="fas fa-info-circle"></i> Kindly mention "Bitulmahal" in the transaction reference for proper allocation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bank-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h2>Zakath Fund</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="bank-details-list">
+                            <li>
+                                <span class="detail-label">Bank Name:</span>
+                                <span class="detail-value">XYZ Bank</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Name:</span>
+                                <span class="detail-value">Negombo Grand Masjid - Zakath</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Number:</span>
+                                <span class="detail-value">0987654321</span>
+                                <button class="copy-btn" data-text="0987654321">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">SWIFT Code:</span>
+                                <span class="detail-value">WXYZ5678</span>
+                                <button class="copy-btn" data-text="WXYZ5678">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">Branch:</span>
+                                <span class="detail-value">Negombo Central Branch</span>
+                            </li>
+                        </ul>
+                        <div class="note">
+                            <p><i class="fas fa-info-circle"></i> Kindly mention "Zakath" in the transaction reference for proper allocation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bank-card">
+                    <div class="card-header">
+                        <i class="fas fa-tools"></i>
+                        <h2>Projects Fund</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="bank-details-list">
+                            <li>
+                                <span class="detail-label">Bank Name:</span>
+                                <span class="detail-value">XYZ Bank</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Name:</span>
+                                <span class="detail-value">Negombo Grand Masjid - Projects</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Number:</span>
+                                <span class="detail-value">0987654321</span>
+                                <button class="copy-btn" data-text="0987654321">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">SWIFT Code:</span>
+                                <span class="detail-value">WXYZ5678</span>
+                                <button class="copy-btn" data-text="WXYZ5678">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">Branch:</span>
+                                <span class="detail-value">Negombo Central Branch</span>
+                            </li>
+                        </ul>
+                        <div class="note">
+                            <p><i class="fas fa-info-circle"></i> Kindly mention "Projects" in the transaction reference for proper allocation.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="Zakath-bank-details-section">
-            <div class="container">
-                <h2>Zakath Bank Details</h2>
-                <p>For zakath related transactions, please use the following details:</p>
-                <ul class="bank-details-list">
-                    <li><strong>Bank Name:</strong> XYZ Bank</li>
-                    <li><strong>Account Name:</strong> Negombo Grand Masjid - Zakath</li>
-                    <li><strong>Account Number:</strong> 0987654321</li>
-                    <li><strong>SWIFT Code:</strong> WXYZ5678</li>
-                    <li><strong>Branch:</strong> Negombo Central Branch</li>
-                </ul>
-                <p>Kindly mention "Zakath" in the transaction reference for proper allocation.</p>
+            
+            <div class="donation-info">
+                <div class="info-card">
+                    <i class="fas fa-quran"></i>
+                    <h3>Importance of Donations</h3>
+                    <p>Your donations help us maintain our masjids, support community programs, and provide assistance to those in need. Every contribution makes a difference.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-receipt"></i>
+                    <h3>Receipts & Transparency</h3>
+                    <p>We provide receipts for all donations upon request. Our financial records are transparent and available for review by community members.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Contact for Assistance</h3>
+                    <p>If you need help with your donation or have questions about our accounts, please contact our financial committee at finance@negombomasjid.org</p>
+                </div>
             </div>
-        </section>
-        <section class="projects-bank-details-section">
-            <div class="container">
-                <h2>Projects Bank Details</h2>
-                <p>For projects related transactions, please use the following details:</p>
-                <ul class="bank-details-list">
-                    <li><strong>Bank Name:</strong> XYZ Bank</li>
-                    <li><strong>Account Name:</strong> Negombo Grand Masjid - Projects</li>
-                    <li><strong>Account Number:</strong> 0987654321</li>
-                    <li><strong>SWIFT Code:</strong> WXYZ5678</li>
-                    <li><strong>Branch:</strong> Negombo Central Branch</li>
-                </ul>
-                <p>Kindly mention "Projects" in the transaction reference for proper allocation.</p>
-            </div>
-        </section>
+        </div>
     </main>
+    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -166,15 +301,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Set current month in calendar header
-        document.addEventListener('DOMContentLoaded', function() {
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                          'July', 'August', 'September', 'October', 'November', 'December'];
-            const currentMonth = new Date().getMonth();
-            document.getElementById('currentMonth').textContent = months[currentMonth];
-        });
-    </script>
 </body>
-
 </html>

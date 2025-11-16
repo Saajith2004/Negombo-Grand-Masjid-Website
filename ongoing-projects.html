@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongoing Projects - Negombo Grand Masjid</title>
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Register My Family</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Application</a></li>
+                        <li><a href="janaza-application.html">Janaza Application</a></li>
+                    </ul>
+                </li>
+                <li><a href="masjids.html">Our Masjids</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>  
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="projects-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Ongoing Projects</h1>
+                    <p>Building our community, one project at a time</p>
+                    <div class="projects-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="activeProjects">8</span>
+                            <span class="stat-label">Active Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="volunteers">150+</span>
+                            <span class="stat-label">Volunteers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="completionRate">72%</span>
+                            <span class="stat-label">Average Completion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Filter -->
+        <section class="projects-filter">
+            <div class="container">
+                <div class="filter-container">
+                    <h3>Filter Projects</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="construction">Construction</button>
+                        <button class="filter-btn" data-filter="renovation">Renovation</button>
+                        <button class="filter-btn" data-filter="community">Community</button>
+                        <button class="filter-btn" data-filter="education">Education</button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="projectSearch" placeholder="Search projects...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-grid-section">
+            <div class="container">
+                <div class="projects-grid" id="projectsContainer">
+                    <!-- Project cards will be dynamically loaded here -->
+                </div>
+                
+                <div class="load-more">
+                    <button id="loadMoreBtn" class="btn btn-primary">Load More Projects</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer Section -->
+        <section class="volunteer-section">
+            <div class="container">
+                <div class="volunteer-content">
+                    <div class="volunteer-text">
+                        <h2>Join Our Volunteer Team</h2>
+                        <p>Be part of our community development projects. Your time and skills can make a difference.</p>
+                        <ul class="volunteer-benefits">
+                            <li><i class="fas fa-check-circle"></i> Gain valuable experience</li>
+                            <li><i class="fas fa-check-circle"></i> Serve your community</li>
+                            <li><i class="fas fa-check-circle"></i> Meet like-minded people</li>
+                            <li><i class="fas fa-check-circle"></i> Earn spiritual rewards</li>
+                        </ul>
+                        <a href="volunteer-application.html" class="btn btn-primary">Become a Volunteer</a>
+                    </div>
+                    <div class="volunteer-image">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Community Volunteers">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Timeline -->
+        <section class="project-timeline">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Project Timeline</h2>
+                    <p>Track the progress of our major initiatives</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jan 2024</div>
+                        <div class="timeline-content">
+                            <h4>New Masjid Construction Started</h4>
+                            <p>Groundbreaking ceremony for the new masjid in Negombo East</p>
+                            <span class="timeline-status completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mar 2024</div>
+                        <div class="timeline-content">
+                            <h4>Educational Center Planning</h4>
+                            <p>Initial planning and design phase for the new education center</p>
+                            <span class="timeline-status completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jun 2024</div>
+                        <div class="timeline-content">
+                            <h4>Main Masjid Renovation</h4>
+                            <p>Renovation of main prayer hall and facilities begins</p>
+                            <span class="timeline-status in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Aug 2024</div>
+                        <div class="timeline-content">
+                            <h4>Community Library Setup</h4>
+                            <p>Establishment of Islamic literature and learning resources</p>
+                            <span class="timeline-status upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Oct 2024</div>
+                        <div class="timeline-content">
+                            <h4>Youth Center Development</h4>
+                            <p>Construction of dedicated space for youth activities</p>
+                            <span class="timeline-status upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> projects@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="style.css"></script>
+</body>
+</html>

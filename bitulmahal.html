@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitulmahal - Negombo Grand Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Register My Family</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Application</a></li>
+                        <li><a href="janaza-application.html">Janaza Application</a></li>
+                    </ul>
+                </li>
+                <li><a href="masjids.html">Our Masjids</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>  
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bitulmahal-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Bitulmahal Program</h1>
+                    <p>Supporting housing needs for our community members</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="familiesHelped">150+</span>
+                            <span class="stat-label">Families Helped</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="projectsCompleted">85</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="activeApplications">12</span>
+                            <span class="stat-label">Active Applications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Bitulmahal Section -->
+        <section class="about-bitulmahal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Bitulmahal</h2>
+                    <p>Our housing assistance program for the community</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>The Bitulmahal program is an initiative by Negombo Grand Masjid to provide housing assistance to families in need within our community. Established in 1985, this program has helped numerous families secure safe and dignified housing.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature">
+                                <i class="fas fa-home"></i>
+                                <h3>Housing Assistance</h3>
+                                <p>Financial support for home construction, repairs, and renovations</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <h3>Community Support</h3>
+                                <p>Volunteer labor and material donations from community members</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <h3>Family Focused</h3>
+                                <p>Priority given to families with children, elderly, and special needs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1564013798-0368-57b51bc98b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Community Housing">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Process -->
+        <section class="application-process">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Application Process</h2>
+                    <p>How to apply for Bitulmahal assistance</p>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Initial Inquiry</h3>
+                            <p>Contact our Bitulmahal committee or submit the online inquiry form</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Documentation</h3>
+                            <p>Submit required documents including proof of need and property details</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Home Visit</h3>
+                            <p>Our committee will conduct a home visit to assess the situation</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Approval</h3>
+                            <p>Application reviewed and approved by the Bitulmahal committee</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Implementation</h3>
+                            <p>Work begins with community volunteers and allocated funds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!-- Bank Details Section -->
+        <section class="bitulmahal-bank-details">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Bank Details for Donations</h2>
+                    <p>Support the Bitulmahal program with your contributions</p>
+                </div>
+                <div class="bank-card">
+                    <div class="card-header">
+                        <i class="fas fa-university"></i>
+                        <h3>Bitulmahal Fund Account</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="bank-details-list">
+                            <li>
+                                <span class="detail-label">Bank Name:</span>
+                                <span class="detail-value">XYZ Bank</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Name:</span>
+                                <span class="detail-value">Negombo Grand Masjid - Bitulmahal</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Account Number:</span>
+                                <span class="detail-value">0987654321</span>
+                                <button class="copy-btn" data-text="0987654321">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">SWIFT Code:</span>
+                                <span class="detail-value">WXYZ5678</span>
+                                <button class="copy-btn" data-text="WXYZ5678">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="detail-label">Branch:</span>
+                                <span class="detail-value">Negombo Central Branch</span>
+                            </li>
+                        </ul>
+                        <div class="note">
+                            <p><i class="fas fa-info-circle"></i> Kindly mention "Bitulmahal" in the transaction reference for proper allocation.</p>
+                        </div>
+                        <div class="more-info">
+                            <a href="bank-details.html" class="btn btn-outline">More Bank Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="success-stories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Success Stories</h2>
+                    <p>Families we've helped through Bitulmahal</p>
+                </div>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Family Story">
+                        </div>
+                        <div class="story-content">
+                            <h3>The Hassan Family</h3>
+                            <p>"After our home was damaged in the floods, Bitulmahal helped us rebuild. The community support was overwhelming."</p>
+                            <span class="story-location">Negombo East</span>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Family Story">
+                        </div>
+                        <div class="story-content">
+                            <h3>The Rizwan Family</h3>
+                            <p>"As a single mother, I never thought I could afford home repairs. Bitulmahal made it possible for me and my children."</p>
+                            <span class="story-location">Negombo Central</span>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Family Story">
+                        </div>
+                        <div class="story-content">
+                            <h3>The Fahim Family</h3>
+                            <p>"With 6 family members in a small house, Bitulmahal helped us build an extension. We finally have enough space."</p>
+                            <span class="story-location">Negombo West</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Make a Difference Today</h2>
+                    <p>Your support can help provide safe housing for families in need</p>
+                    <div class="cta-buttons">
+                        <a href="#donate" class="btn btn-primary">Donate Now</a>
+                        <a href="#apply" class="btn btn-secondary">Apply for Assistance</a>
+                        <a href="#volunteer" class="btn btn-outline">Volunteer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about Bitulmahal program</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Who is eligible for Bitulmahal assistance?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Muslim families residing in Negombo area with genuine housing needs, particularly those with limited income, elderly members, persons with disabilities, or large families living in inadequate conditions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What types of housing assistance are provided?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide various forms of assistance including home construction for those without proper housing, home repairs and renovations, roof repairs, bathroom and kitchen improvements, and emergency housing support.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does the application process take?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The complete process typically takes 4-8 weeks from initial application to approval. Emergency cases may be processed faster. The timeline depends on the complexity of the case and availability of funds.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I volunteer for Bitulmahal projects?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We welcome volunteers with various skills - construction, plumbing, electrical work, painting, or general labor. You can also volunteer for administrative tasks or fundraising activities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> bitulmahal@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
