@@ -1,119 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negombo Grand Masjid - Family Registration</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Registration | Negombo Grand Masjid</title>
+
+    <!-- MAIN CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/a2e860f0d4.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* ===== Extra Styles for Family Members (Option A - Card Style) ===== */
+        .member-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .member-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .member-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .member-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--primary);
+        }
+
+        .member-card h4 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .removeMemberBtn {
+            margin-top: 15px;
+            background: #d9534f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .removeMemberBtn:hover {
+            background: #c9302c;
+        }
+
+        #addMemberBtn {
+            margin-top: 20px;
+            padding: 12px 22px;
+            font-size: 1rem;
+        }
+    </style>
+
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-top">
-            <div class="container">
-                <div class="header-content">
-                    <div class="logo">
-                        <i class="fas fa-mosque"></i>
-                        <h1>Negombo Grand Masjid</h1>
-                    </div>
-                    <div class="header-right">
-                        <div class="prayer-times">
-                            <span id="currentPrayerTime">Loading prayer times...</span>
-                        </div>
-                    </div>
+
+<!-- ===== HEADER / NAVBAR ===== -->
+<header>
+    <div class="container header-top">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <h1>Negombo Grand Masjid</h1>
+            </div>
+
+            <div class="header-right">
+                <div class="prayer-times">
+                    <span>Fajr: 4:45 AM</span>
+                    <span>Asr: 3:30 PM</span>
+                    <span>Isha: 7:15 PM</span>
                 </div>
             </div>
         </div>
-        
-        <nav class="navbar">
-            <div class="container">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="leadership.html">Leadership</a></li>
-                    <li class="dropdown">
-                        <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="member-application.html">Member Application</a></li>
-                            <li><a href="family-registration.html">Register My Family</a></li>
-                            <li><a href="zakath-application.html">Zakath Application</a></li>
-                            <li><a href="marriage-application.html">Marriage Application</a></li>
-                            <li><a href="janaza-application.html">Janaza Application</a></li>
-                            <li><a href="bitulmahal.html">Bitumahal Application</a></li>
-                            <li><a href="character-certificate.html">Character Certificate</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="masjids.html">Our Masjids</a></li>
-                    <li class="dropdown">
-                        <a href="events.html">Events <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="upcoming-events.html">Upcoming Events</a></li>
-                            <li><a href="event-gallery.html">Event Gallery</a></li>
-                            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                </ul>
-                <!-- <div class="auth-buttons">
-                    <a href="login.html" class="btn-login">Login</a>
-                    <a href="register.html" class="btn-register">Register</a>
-                </div> -->
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    </div>
 
-    
-    <!-- ===== PAGE HEADER ===== -->
-<section class="page-header" style="background-image: url('../images/family-header.jpg');">
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="family-registration.html" class="active">Register</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="masjids.html">Masjids</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
     <div class="container">
         <h1>Family Registration</h1>
-        <p>Register your family with the Negombo Grand Masjid community</p>
-    </div>
-</section>
-
-<!-- ===== INTRO SECTION ===== -->
-<section class="registration-intro">
-    <div class="container">
-        <div class="intro-card">
-            <i class="fas fa-users"></i>
-            <h2>Why Family Registration?</h2>
-            <p>
-                Family registration helps the Masjid maintain accurate community records, 
-                provide assistance when needed, coordinate religious programs, 
-                and ensure your family stays connected with all services.
-            </p>
-        </div>
+        <p>Register your full family information with Negombo Grand Masjid</p>
     </div>
 </section>
 
 <!-- ===== FAMILY REGISTRATION FORM ===== -->
 <section class="family-registration-form">
     <div class="container">
-        <h2 class="section-title">Family Information</h2>
+
+        <h2 class="section-title">Family Head Information</h2>
 
         <form action="#" method="POST" class="form-container">
 
-            <!-- HOUSEHOLD INFORMATION -->
+            <!-- FAMILY HEAD DETAILS -->
             <div class="form-section">
-                <h3>Household Information</h3>
-
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Head of Family (Full Name)</label>
+                        <label>Full Name</label>
                         <input type="text" name="head_name" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Family Number (if known)</label>
-                        <input type="text" name="family_number">
+                        <label>NIC Number</label>
+                        <input type="text" name="head_nic" required>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Permanent Address</label>
+                    <input type="text" name="address" required>
                 </div>
 
                 <div class="form-row">
@@ -123,64 +150,24 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Email Address</label>
+                        <label>Email (Optional)</label>
                         <input type="email" name="email">
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label>Home Address</label>
-                    <input type="text" name="address" required>
-                </div>
             </div>
 
-            <!-- FAMILY MEMBERS -->
-            <div class="form-section">
-                <h3>Family Members</h3>
-                <p class="section-note">Add details of all family members living in the same household.</p>
+            <!-- ===== FAMILY MEMBERS ===== -->
+            <h2 class="section-title">Family Members</h2>
 
-                <div class="family-members">
-
-                    <div class="member-entry">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" name="member_name[]" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Relationship</label>
-                                <select name="member_relationship[]">
-                                    <option>Father</option>
-                                    <option>Mother</option>
-                                    <option>Son</option>
-                                    <option>Daughter</option>
-                                    <option>Grandparent</option>
-                                    <option>Sibling</option>
-                                    <option>Relative</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Age</label>
-                                <input type="number" name="member_age[]" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Occupation / School</label>
-                                <input type="text" name="member_work[]">
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn-secondary add-member-btn">
-                        <i class="fas fa-plus-circle"></i> Add Another Member
-                    </button>
-                </div>
+            <div class="member-header">
+                <h3>Total Members: <span id="memberCount">0</span></h3>
             </div>
 
+            <div id="familyMembersContainer" class="member-container"></div>
+
+            <button type="button" id="addMemberBtn" class="btn-primary">
+                + Add Family Member
+            </button>
             <!-- RELIGIOUS DETAILS -->
             <div class="form-section">
                 <h3>Religious Information</h3>
@@ -210,8 +197,7 @@
                 </div>
             </div>
 
-            <!-- SUBMIT -->
-            <div class="form-actions">
+            <div class="form-actions" style="margin-top: 30px;">
                 <button type="submit" class="btn-primary">
                     <i class="fas fa-paper-plane"></i> Submit Registration
                 </button>
@@ -220,6 +206,7 @@
         </form>
     </div>
 </section>
+
 
 <!-- ===== BOTTOM INFO SECTION ===== -->
 <section class="registration-info">
@@ -247,66 +234,119 @@
         </div>
     </div>
 </section>
-    
-    
-    
-    
-   <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo">
-                        <i class="fas fa-mosque"></i>
-                        <h2>Negombo Grand Masjid</h2>
-                    </div>
-                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="masjids.html">Our Masjids</a></li>
-                        <li><a href="events.html">Events</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="Our-services/member-application.html">Member Application</a></li>
-                        <li><a href="Our-services/family-registration.html">Family Registration</a></li>
-                        <li><a href="Our-services/zakath-application.html">Zakath Application</a></li>
-                        <li><a href="Our-services/marriage-application.html">Marriage Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
-                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
-                    <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
 
-    <script src="script.js"></script>
-    <script>
-        // Set current month in calendar header
-        document.addEventListener('DOMContentLoaded', function() {
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                          'July', 'August', 'September', 'October', 'November', 'December'];
-            const currentMonth = new Date().getMonth();
-            document.getElementById('currentMonth').textContent = months[currentMonth];
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container footer-content">
+
+        <div class="footer-section">
+            <h3>About</h3>
+            <p>Negombo Grand Masjid serves the entire community with religious guidance,
+               welfare services, education, and support activities.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="family-registration.html">Family Registration</a></li>
+                <li><a href="member-application.html">Member Application</a></li>
+                <li><a href="zakath-application.html">Zakath Application</a></li>
+                <li><a href="marriage-application.html">Marriage Services</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Negombo Sri Lanka</p>
+            <p><i class="fas fa-phone"></i> +94 77 123 4567</p>
+            <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- ===== WORKING INLINE JS ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const addMemberBtn = document.getElementById("addMemberBtn");
+    const container = document.getElementById("familyMembersContainer");
+    const memberCountDisplay = document.getElementById("memberCount");
+
+    let memberCount = 0;
+
+    function updateCount() {
+        memberCountDisplay.textContent = memberCount;
+    }
+
+    addMemberBtn.addEventListener("click", function () {
+
+        memberCount++;
+        updateCount();
+
+        const card = document.createElement("div");
+        card.classList.add("member-card");
+
+        card.innerHTML = `
+            <h4>Family Member #${memberCount}</h4>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="member_name[]" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Relationship</label>
+                    <select name="member_relationship[]">
+                        <option>Father</option>
+                        <option>Mother</option>
+                        <option>Son</option>
+                        <option>Daughter</option>
+                        <option>Sibling</option>
+                        <option>Grandparent</option>
+                        <option>Relative</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" name="member_age[]" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Occupation / School</label>
+                    <input type="text" name="member_work[]">
+                </div>
+            </div>
+
+            <button type="button" class="removeMemberBtn">Remove Member</button>
+        `;
+
+        container.appendChild(card);
+
+        card.querySelector(".removeMemberBtn").addEventListener("click", function () {
+            card.remove();
+            memberCount--;
+            updateCount();
+
+            // Re-Index Cards
+            const allCards = document.querySelectorAll(".member-card");
+            allCards.forEach((c, index) => {
+                c.querySelector("h4").textContent = `Family Member #${index + 1}`;
+            });
         });
-    </script>
+    });
+
+});
+</script>
+
 </body>
 </html>

@@ -1472,3 +1472,53 @@ function copyText(text) {
         alert("Copied to clipboard: " + text);
     });
 }
+
+// ===== FAMILY REGISTRATION: ADD MEMBERS DYNAMICALLY =====
+document.addEventListener("DOMContentLoaded", function() {
+    const addMemberBtn = document.getElementById("addMemberBtn");
+    const container = document.getElementById("familyMembersContainer");
+
+    if (!addMemberBtn || !container) return; // Only run on Family Registration page
+
+    addMemberBtn.addEventListener("click", () => {
+        const memberCard = document.createElement("div");
+        memberCard.classList.add("form-section");
+
+        memberCard.innerHTML = `
+            <h3>Family Member</h3>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="member_name[]" required>
+                </div>
+
+                <div class="form-group">
+                    <label>NIC</label>
+                    <input type="text" name="member_nic[]" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Relationship</label>
+                    <input type="text" name="member_relationship[]" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" name="member_dob[]" required>
+                </div>
+            </div>
+
+            <button type="button" class="btn-secondary removeMemberBtn" style="margin-top:10px;">
+                Remove Member
+            </button>
+        `;
+
+        container.appendChild(memberCard);
+
+        const removeBtn = memberCard.querySelector(".removeMemberBtn");
+        removeBtn.addEventListener("click", () => memberCard.remove());
+    });
+});
