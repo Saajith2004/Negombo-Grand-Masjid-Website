@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Gallery - Negombo Grand Masjid</title>
+    <link rel="stylesheet" href="event-gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Register My Family</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Application</a></li>
+                        <li><a href="janaza-application.html">Janaza Application</a></li>
+                    </ul>
+                </li>
+                <li><a href="masjids.html">Our Masjids</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>  
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="gallery-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Event Gallery</h1>
+                    <p>Memorable moments from our community events and activities</p>
+                    <div class="gallery-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="totalEvents">50+</span>
+                            <span class="stat-label">Events Captured</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="totalPhotos">1200+</span>
+                            <span class="stat-label">Photos & Videos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="years">5</span>
+                            <span class="stat-label">Years of Memories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Filter -->
+        <section class="gallery-filter">
+            <div class="container">
+                <div class="filter-container">
+                    <h3>Filter Events</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Events</button>
+                        <button class="filter-btn" data-filter="religious">Religious</button>
+                        <button class="filter-btn" data-filter="community">Community</button>
+                        <button class="filter-btn" data-filter="educational">Educational</button>
+                        <button class="filter-btn" data-filter="social">Social</button>
+                        <button class="filter-btn" data-filter="charity">Charity</button>
+                    </div>
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="masonry"><i class="fas fa-th-large"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-grid" id="galleryContainer" data-view="grid">
+                    <!-- Gallery items will be dynamically loaded here -->
+                </div>
+                
+                <div class="load-more">
+                    <button id="loadMoreBtn" class="btn btn-primary">Load More Events</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Events -->
+        <section class="featured-events">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Events</h2>
+                    <p>Highlights from our most memorable community gatherings</p>
+                </div>
+                <div class="featured-slider">
+                    <div class="slider-container">
+                        <div class="slider-track" id="sliderTrack">
+                            <!-- Featured event slides will be dynamically loaded here -->
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="upcoming-events">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Upcoming Events</h2>
+                    <p>Join us for these exciting upcoming activities</p>
+                </div>
+                <div class="events-list">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">15</span>
+                            <span class="date-month">DEC</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Eid Milad-un-Nabi Celebration</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Main Prayer Hall</p>
+                            <p><i class="fas fa-clock"></i> 6:00 PM - 9:00 PM</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">20</span>
+                            <span class="date-month">DEC</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Winter Charity Drive</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Community Center</p>
+                            <p><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">25</span>
+                            <span class="date-month">DEC</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Quran Competition Finals</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Education Center</p>
+                            <p><i class="fas fa-clock"></i> 2:00 PM - 6:00 PM</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery -->
+        <section class="video-gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Video Highlights</h2>
+                    <p>Relive the moments through our video collection</p>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Eid Celebration">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Eid al-Fitr Celebration 2023</h4>
+                            <p>Beautiful moments from our community Eid celebration</p>
+                            <span class="video-duration">15:30</span>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Community Iftar">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Community Iftar Gathering</h4>
+                            <p>Ramadan iftar with hundreds of community members</p>
+                            <span class="video-duration">08:45</span>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Youth Program">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Youth Leadership Program</h4>
+                            <p>Highlights from our annual youth development program</p>
+                            <span class="video-duration">12:20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <div class="lightbox-nav">
+                    <button id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h2>Negombo Grand Masjid</h2>
+                    </div>
+                    <p>Managing 11 masjids serving 500+ families in Negombo since 1970.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="masjids.html">Our Masjids</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="member-application.html">Member Application</a></li>
+                        <li><a href="family-registration.html">Family Registration</a></li>
+                        <li><a href="zakath-application.html">Zakath Application</a></li>
+                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
+                    <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
+                    <p><i class="fas fa-envelope"></i> events@negombomasjid.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Negombo Grand Masjid. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="event-gallery.js"></script>
+</body>
+</html>
