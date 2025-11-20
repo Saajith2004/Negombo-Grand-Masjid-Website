@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negombo Grand Masjid - Contact Us</title>
+    <title>Negombo Grand Masjid - Zakath Application</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/a2e860f0d4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -36,6 +35,7 @@
                     <li class="dropdown">
                         <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
+                            <li><a href="applications/member-application.html">Member Application</a></li>
                             <li><a href="applications/family-registration.html">Register My Family</a></li>
                             <li><a href="applications/zakath-application.html">Zakath Application</a></li>
                             <li><a href="applications/marriage-application.html">Marriage Application</a></li>
@@ -73,150 +73,159 @@
     <!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
     <div class="container">
-        <h1>Contact Us</h1>
-        <p>Reach out to the Negombo Grand Masjid administration for assistance or inquiries</p>
+        <h1>Zakat Application</h1>
+        <p>Submit your details to apply for Zakat assistance from the Masjid</p>
     </div>
 </section>
 
-<!-- ===== MAIN CONTACT INFO ===== -->
-<section class="contact-info">
+<!-- ===== INTRO SECTION ===== -->
+<section class="registration-intro">
     <div class="container">
-
-        <h2 class="section-title">Masjid Contact Details</h2>
-
-        <div class="contact-grid">
-
-            <!-- LEFT SIDE INFO -->
-            <div class="contact-main">
-                <h2>Get in Touch</h2>
-
-                <div class="contact-details">
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>77, Jumma Masjid Road, Peiyamulla, Negombo</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+94 77 123 4567</p>
-                            <p>+94 76 987 6543</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@ngm.lk</p>
-                            <p>support@ngm.lk</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Office Hours</h3>
-                            <p>Mon – Sat: 8:30 AM – 5:00 PM</p>
-                            <p>Friday: 8:30 AM – 11:30 AM, 2:30 PM – 5:00 PM</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- RIGHT SIDE MAP -->
-            <div class="contact-map">
-                <i class="fas fa-map"></i>
-                <h3>Google Map Coming Soon</h3>
-                <p>We will embed the live map once the backend is ready.</p>
-            </div>
-
+        <div class="intro-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h2>Zakat Assistance</h2>
+            <p>
+                The Masjid provides Zakat assistance to eligible individuals and families in need. 
+                Please fill the form below with accurate information. All details will be kept confidential.
+            </p>
         </div>
     </div>
 </section>
 
-<!-- ===== MASJID CONTACT CARDS ===== -->
-<section class="masjid-contacts">
+<!-- ===== ZAKAT APPLICATION FORM ===== -->
+<section class="family-registration-form">
     <div class="container">
-
-        <h2 class="section-title">Important Contacts</h2>
-
-        <div class="masjid-contact-grid">
-
-            <div class="masjid-contact-card">
-                <h3>General Office</h3>
-                <p><i class="fas fa-phone"></i> +94 77 123 4567</p>
-                <p><i class="fas fa-envelope"></i> office@ngm.lk</p>
-            </div>
-
-            <div class="masjid-contact-card">
-                <h3>Imam / Religious Affairs</h3>
-                <p><i class="fas fa-phone"></i> +94 70 555 2233</p>
-                <p><i class="fas fa-envelope"></i> imam@ngm.lk</p>
-            </div>
-
-            <div class="masjid-contact-card">
-                <h3>Janaza Services</h3>
-                <p><i class="fas fa-phone"></i> +94 77 789 6543</p>
-                <p><i class="fas fa-ambulance"></i> Available 24/7</p>
-            </div>
-
-            <div class="masjid-contact-card">
-                <h3>Education / Madrasa</h3>
-                <p><i class="fas fa-phone"></i> +94 75 222 1188</p>
-                <p><i class="fas fa-envelope"></i> madrasa@ngm.lk</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ===== CONTACT FORM ===== -->
-<section class="contact-form-section">
-    <div class="container">
-
-        <h2 class="section-title">Send Us a Message</h2>
+        <h2 class="section-title">Applicant Information</h2>
 
         <form action="#" method="POST" class="form-container">
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" name="name" required>
+            <!-- PERSONAL INFO -->
+            <div class="form-section">
+                <h3>Personal Details</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="full_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>NIC Number</label>
+                        <input type="text" name="nic" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alternate Phone (Optional)</label>
+                        <input type="text" name="alternate_phone">
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Your Email</label>
-                    <input type="email" name="email" required>
+                    <label>Address</label>
+                    <input type="text" name="address" required>
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Subject</label>
-                    <input type="text" name="subject" required>
+            <!-- FAMILY INFO -->
+            <div class="form-section">
+                <h3>Family Information</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Number of Family Members</label>
+                        <input type="number" name="family_members" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Number of Dependents</label>
+                        <input type="number" name="dependents" required>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Phone (Optional)</label>
-                    <input type="text" name="phone">
+                    <label>Marital Status</label>
+                    <select name="marital_status" required>
+                        <option value="">Select</option>
+                        <option>Married</option>
+                        <option>Single</option>
+                        <option>Widowed</option>
+                        <option>Divorced</option>
+                    </select>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>Your Message</label>
-                <textarea name="message" rows="5" required></textarea>
+            <!-- INCOME DETAILS -->
+            <div class="form-section">
+                <h3>Financial Information</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Monthly Income</label>
+                        <input type="number" name="monthly_income" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Occupation</label>
+                        <input type="text" name="occupation">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you currently employed?</label>
+                    <select name="employment_status" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
             </div>
 
+            <!-- REQUEST DETAILS -->
+            <div class="form-section">
+                <h3>Zakat Request Information</h3>
+
+                <div class="form-group">
+                    <label>Purpose of Zakat Assistance</label>
+                    <textarea name="purpose" rows="3" placeholder="Describe your situation and why you need assistance" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Requested Zakat Amount</label>
+                    <input type="number" name="requested_amount" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you received Zakat before?</label>
+                    <select name="received_before" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- DOCUMENTS -->
+            <div class="form-section">
+                <h3>Supporting Documents</h3>
+                <p style="color:#666; font-size:0.9rem;">(Optional) Attach any documents that support your request (income proof, letters, bills)</p>
+
+                <div class="form-group">
+                    <label>Upload File (Optional)</label>
+                    <input type="file" name="support_document">
+                </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
             <div class="form-actions">
                 <button type="submit" class="btn-primary">
-                    <i class="fas fa-paper-plane"></i> Send Message
+                    <i class="fas fa-paper-plane"></i> Submit Zakat Application
                 </button>
             </div>
 
@@ -224,20 +233,37 @@
     </div>
 </section>
 
-<!-- ===== EMERGENCY CONTACT ===== -->
-<section class="emergency-contact">
+<!-- ===== SUPPORT INFO ===== -->
+<section class="registration-info">
     <div class="container">
-        <div class="emergency-card">
-            <i class="fas fa-bell"></i>
-            <div class="emergency-content">
-                <h3>Emergency Hotline</h3>
-                <p class="emergency-phone"><i class="fas fa-phone"></i> +94 77 789 6543</p>
-                <p>For urgent Janaza services or critical assistance, contact the hotline above.</p>
+        <div class="info-grid">
+
+            <div class="info-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Zakat Distribution</h3>
+                <p>The Masjid ensures that Zakat reaches those who are genuinely eligible.</p>
             </div>
+
+            <div class="info-card">
+                <i class="fas fa-file-contract"></i>
+                <h3>Confidential Review</h3>
+                <p>Your application is reviewed confidentially by the Zakat Committee.</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-phone-volume"></i>
+                <h3>Need Help?</h3>
+                <p>Contact our Zakat support team for assistance with your application.</p>
+            </div>
+
         </div>
     </div>
 </section>
-
+    
+    
+    
+    
+    
     <!-- Footer -->
     <footer>
         <div class="container">

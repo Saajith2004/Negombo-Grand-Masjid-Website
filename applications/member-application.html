@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negombo Grand Masjid - Janaza Application</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Negombo Grand Masjid - Member Application</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -34,13 +35,13 @@
                     <li class="dropdown">
                         <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="member-application.html">Member Application</a></li>
-                            <li><a href="family-registration.html">Register My Family</a></li>
-                            <li><a href="zakath-application.html">Zakath Application</a></li>
-                            <li><a href="marriage-application.html">Marriage Application</a></li>
-                            <li><a href="janaza-application.html">Janaza Application</a></li>
-                            <li><a href="bitulmahal.html">Bitumahal Application</a></li>
-                            <li><a href="character-certificate.html">Character Certificate</a></li>
+                            <li><a href="applications/member-application.html">Member Application</a></li>
+                            <li><a href="applications/family-registration.html">Register My Family</a></li>
+                            <li><a href="applications/zakath-application.html">Zakath Application</a></li>
+                            <li><a href="applications/marriage-application.html">Marriage Application</a></li>
+                            <li><a href="applications/janaza-application.html">Janaza Application</a></li>
+                            <li><a href="applications/bitulmahal.html">Bitumahal Application</a></li>
+                            <li><a href="applications/character-certificate.html">Character Certificate</a></li>
                         </ul>
                     </li>
                     <li><a href="masjids.html">Our Masjids</a></li>
@@ -68,13 +69,12 @@
             </div>
         </nav>
     </header>
-    
-    
-    <!-- ===== PAGE HEADER ===== -->
+
+ <!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
     <div class="container">
-        <h1>Janaza Application</h1>
-        <p>Submit details for Janaza support and funeral arrangements</p>
+        <h1>Member Application</h1>
+        <p>Apply to become an official member of the Negombo Muslim Community Association</p>
     </div>
 </section>
 
@@ -82,141 +82,168 @@
 <section class="registration-intro">
     <div class="container">
         <div class="intro-card">
-            <i class="fas fa-dove"></i>
-            <h2>Janaza Assistance</h2>
+            <i class="fas fa-users"></i>
+            <h2>Apply for Membership</h2>
             <p>
-                During this difficult time, the Masjid provides full support for Janaza procedures, 
-                Ghusl arrangements, burial guidance, and coordination with the cemetery. 
-                Please fill the form carefully with accurate information.
+                Becoming a member gives you access to community services, mosque programs, voting rights,
+                and participation in key events. Please fill the form with accurate information.
             </p>
         </div>
     </div>
 </section>
 
-<!-- ===== JANAZA APPLICATION FORM ===== -->
+<!-- ===== MEMBER APPLICATION FORM ===== -->
 <section class="family-registration-form">
     <div class="container">
-        <h2 class="section-title">Deceased Person's Details</h2>
+
+        <h2 class="section-title">Personal Information</h2>
 
         <form action="#" method="POST" class="form-container">
 
-            <!-- DECEASED DETAILS -->
+            <!-- PERSONAL DETAILS -->
             <div class="form-section">
-                <h3>Personal Information of the Deceased</h3>
+                <h3>Applicant Details</h3>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Full Name of the Deceased</label>
-                        <input type="text" name="deceased_name" required>
+                        <label>Full Name</label>
+                        <input type="text" name="full_name" required>
                     </div>
 
                     <div class="form-group">
                         <label>NIC Number</label>
-                        <input type="text" name="deceased_nic">
+                        <input type="text" name="nic" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Age</label>
-                        <input type="number" name="deceased_age" required>
+                        <label>Date of Birth</label>
+                        <input type="date" name="dob" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Date of Death</label>
-                        <input type="date" name="death_date" required>
+                        <label>Gender</label>
+                        <select name="gender" required>
+                            <option value="">Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Cause of Death (if known)</label>
-                    <input type="text" name="death_cause">
-                </div>
-
-                <div class="form-group">
-                    <label>Address of the Deceased</label>
-                    <input type="text" name="deceased_address" required>
-                </div>
-            </div>
-
-            <!-- REQUESTER DETAILS -->
-            <div class="form-section">
-                <h3>Applicant / Contact Person</h3>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Your Full Name</label>
-                        <input type="text" name="applicant_name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Relationship to the Deceased</label>
-                        <input type="text" name="relationship" required>
-                    </div>
+                    <label>Residential Address</label>
+                    <input type="text" name="address" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="text" name="applicant_phone" required>
+                        <input type="text" name="phone" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Alternate Contact Number</label>
-                        <input type="text" name="alternate_phone">
+                        <label>Email Address (Optional)</label>
+                        <input type="email" name="email">
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Email (optional)</label>
-                    <input type="email" name="applicant_email">
                 </div>
             </div>
 
-            <!-- FUNERAL DETAILS -->
+            <!-- FAMILY INFO -->
             <div class="form-section">
-                <h3>Funeral Arrangements</h3>
+                <h3>Family Information</h3>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Preferred Janaza Time</label>
-                        <input type="time" name="janaza_time">
+                        <label>Marital Status</label>
+                        <select name="marital_status" required>
+                            <option value="">Select</option>
+                            <option>Married</option>
+                            <option>Single</option>
+                            <option>Widowed</option>
+                            <option>Divorced</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label>Preferred Janaza Location (Masjid / House)</label>
-                        <input type="text" name="janaza_location">
+                        <label>Number of Family Members</label>
+                        <input type="number" name="family_members" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Place of Burial</label>
-                    <input type="text" name="burial_place" placeholder="Example: Negombo Muslim Burial Grounds">
-                </div>
-
-                <div class="form-group">
-                    <label>Is Ghusl required?</label>
-                    <select name="ghusl_required">
-                        <option value="yes">Yes</option>
-                        <option value="no">No (Already Performed)</option>
+                    <label>Any family member already a registered member?</label>
+                    <select name="family_member_registered" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label>Do you need transport for the Janaza?</label>
-                    <select name="transport_required">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
+                    <label>If Yes, provide their Membership Number</label>
+                    <input type="text" name="membership_reference" placeholder="Optional">
+                </div>
+            </div>
+
+            <!-- EMPLOYMENT INFO -->
+            <div class="form-section">
+                <h3>Employment Information</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Occupation</label>
+                        <input type="text" name="occupation">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Monthly Income (Optional)</label>
+                        <input type="number" name="monthly_income">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills / Experience (Optional)</label>
+                    <textarea name="skills" rows="3" placeholder="Mention any skills, profession, community work etc."></textarea>
+                </div>
+            </div>
+
+            <!-- MEMBERSHIP REASON -->
+            <div class="form-section">
+                <h3>Membership Information</h3>
+
+                <div class="form-group">
+                    <label>Why do you want to become a member?</label>
+                    <textarea name="reason" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Masjid (if applicable)</label>
+                    <select name="preferred_masjid">
+                        <option value="">Select</option>
+                        <option>Negombo Grand Mosque</option>
+                        <option>Yoosufiya Jummah Masjid</option>
+                        <option>Huda Jummah Mosque</option>
+                        <option>Masjidul Hairath</option>
+                        <option>Masjidul Deeniya</option>
+                        <option>Masjidul Hasanath</option>
+                        <option>Masjidul Rahmaniya</option>
+                        <option>Masjidul Hameediya</option>
+                        <option>Masjidul Thaqwa</option>
+                        <option>Masjidul Aabidha</option>
                     </select>
                 </div>
             </div>
 
-            <!-- NOTES -->
+            <!-- DOCUMENT UPLOAD -->
             <div class="form-section">
-                <h3>Additional Notes</h3>
+                <h3>Supporting Documents</h3>
+                <p style="color:#666; font-size:0.9rem;">Upload NIC image or any supporting documents (Optional)</p>
+
                 <div class="form-group">
-                    <label>Any special requests or information?</label>
-                    <textarea name="notes" rows="4"></textarea>
+                    <label>Upload File</label>
+                    <input type="file" name="document">
                 </div>
             </div>
 
@@ -231,35 +258,33 @@
     </div>
 </section>
 
-<!-- ===== SUPPORT INFO SECTION ===== -->
+<!-- ===== INFORMATION CARDS ===== -->
 <section class="registration-info">
     <div class="container">
         <div class="info-grid">
 
             <div class="info-card">
-                <i class="fas fa-hands-helping"></i>
-                <h3>Complete Assistance</h3>
-                <p>The Masjid team will guide your family through all Janaza procedures.</p>
+                <i class="fas fa-id-card"></i>
+                <h3>Membership Benefits</h3>
+                <p>Access to events, voting rights, community services, and special programs.</p>
             </div>
 
             <div class="info-card">
-                <i class="fas fa-file-alt"></i>
-                <h3>Required Information</h3>
-                <p>Provide accurate details for a smooth and respectful process.</p>
+                <i class="fas fa-check-circle"></i>
+                <h3>Verification Process</h3>
+                <p>Your application will be reviewed by the Membership Committee.</p>
             </div>
 
             <div class="info-card">
-                <i class="fas fa-phone"></i>
-                <h3>Emergency Support</h3>
-                <p>Contact us anytime for Janaza-related urgent assistance.</p>
+                <i class="fas fa-phone-volume"></i>
+                <h3>Need Help?</h3>
+                <p>Contact the Membership Desk for assistance.</p>
             </div>
 
         </div>
     </div>
 </section>
-    
-    
-    
+
    <!-- Footer -->
     <footer>
         <div class="container">
@@ -288,10 +313,10 @@
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="member-application.html">Member Application</a></li>
-                        <li><a href="family-registration.html">Family Registration</a></li>
-                        <li><a href="zakath-application.html">Zakath Application</a></li>
-                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                        <li><a href="applications/member-application.html">Member Application</a></li>
+                        <li><a href="applications/family-registration.html">Family Registration</a></li>
+                        <li><a href="applications/zakath-application.html">Zakath Application</a></li>
+                        <li><a href="applications/marriage-application.html">Marriage Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">

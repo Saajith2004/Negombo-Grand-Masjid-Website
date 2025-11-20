@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Family Registration | Negombo Grand Masjid</title>
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negombo Grand Masjid - Zakath Application</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/a2e860f0d4.js" crossorigin="anonymous"></script>
 
@@ -67,46 +68,66 @@
         }
     </style>
 
-</head>
-
-<body>
-
-<!-- ===== HEADER / NAVBAR ===== -->
-<header>
-    <div class="container header-top">
-        <div class="header-content">
-            <div class="logo">
-                <i class="fas fa-mosque"></i>
-                <h1>Negombo Grand Masjid</h1>
-            </div>
-
-            <div class="header-right">
-                <div class="prayer-times">
-                    <span>Fajr: 4:45 AM</span>
-                    <span>Asr: 3:30 PM</span>
-                    <span>Isha: 7:15 PM</span>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-mosque"></i>
+                        <h1>Negombo Grand Masjid</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="prayer-times">
+                            <span id="currentPrayerTime">Loading prayer times...</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="family-registration.html" class="active">Register</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="masjids.html">Masjids</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-            <div class="hamburger" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
-                <span></span><span></span><span></span>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="applications/member-application.html">Member Application</a></li>
+                            <li><a href="applications/family-registration.html">Register My Family</a></li>
+                            <li><a href="applications/zakath-application.html">Zakath Application</a></li>
+                            <li><a href="applications/marriage-application.html">Marriage Application</a></li>
+                            <li><a href="applications/janaza-application.html">Janaza Application</a></li>
+                            <li><a href="applications/bitulmahal.html">Bitumahal Application</a></li>
+                            <li><a href="applications/character-certificate.html">Character Certificate</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="masjids.html">Our Masjids</a></li>
+                    <li class="dropdown">
+                        <a href="events.html">Events <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                            <li><a href="event-gallery.html">Event Gallery</a></li>
+                            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <!-- <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div> -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 <!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
@@ -250,10 +271,10 @@
         <div class="footer-section">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="family-registration.html">Family Registration</a></li>
-                <li><a href="member-application.html">Member Application</a></li>
-                <li><a href="zakath-application.html">Zakath Application</a></li>
-                <li><a href="marriage-application.html">Marriage Services</a></li>
+                <li><a href="applications/family-registration.html">Family Registration</a></li>
+                <li><a href="applications/member-application.html">Member Application</a></li>
+                <li><a href="applications/zakath-application.html">Zakath Application</a></li>
+                <li><a href="applications/marriage-application.html">Marriage Services</a></li>
             </ul>
         </div>
 
