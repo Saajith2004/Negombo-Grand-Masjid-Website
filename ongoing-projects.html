@@ -70,140 +70,208 @@
     </header>
  
     
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="projects-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Ongoing Projects</h1>
-                    <p>Building our community, one project at a time</p>
-                    <div class="projects-stats">
-                        <div class="stat">
-                            <span class="stat-number" id="activeProjects">8</span>
-                            <span class="stat-label">Active Projects</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" id="volunteers">150+</span>
-                            <span class="stat-label">Volunteers</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" id="completionRate">72%</span>
-                            <span class="stat-label">Average Completion</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+    <div class="container">
+        <h1>Ongoing Projects</h1>
+        <p>Current development initiatives and community programs at Negombo Grand Masjid</p>
+    </div>
+</section>
 
-        <!-- Projects Filter -->
-        <section class="projects-filter">
-            <div class="container">
-                <div class="filter-container">
-                    <h3>Filter Projects</h3>
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">All Projects</button>
-                        <button class="filter-btn" data-filter="construction">Construction</button>
-                        <button class="filter-btn" data-filter="renovation">Renovation</button>
-                        <button class="filter-btn" data-filter="community">Community</button>
-                        <button class="filter-btn" data-filter="education">Education</button>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" id="projectSearch" placeholder="Search projects...">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- ===== PROJECTS OVERVIEW ===== -->
+<section class="ongoing-projects">
+    <div class="container">
 
-        <!-- Projects Grid -->
-        <section class="projects-grid-section">
-            <div class="container">
-                <div class="projects-grid" id="projectsContainer">
-                    <!-- Project cards will be dynamically loaded here -->
-                </div>
-                
-                <div class="load-more">
-                    <button id="loadMoreBtn" class="btn btn-primary">Load More Projects</button>
-                </div>
-            </div>
-        </section>
+        <h2 class="section-title">Current Masjid Projects</h2>
 
-        <!-- Volunteer Section -->
-        <section class="volunteer-section">
-            <div class="container">
-                <div class="volunteer-content">
-                    <div class="volunteer-text">
-                        <h2>Join Our Volunteer Team</h2>
-                        <p>Be part of our community development projects. Your time and skills can make a difference.</p>
-                        <ul class="volunteer-benefits">
-                            <li><i class="fas fa-check-circle"></i> Gain valuable experience</li>
-                            <li><i class="fas fa-check-circle"></i> Serve your community</li>
-                            <li><i class="fas fa-check-circle"></i> Meet like-minded people</li>
-                            <li><i class="fas fa-check-circle"></i> Earn spiritual rewards</li>
-                        </ul>
-                        <a href="volunteer-application.html" class="btn btn-primary">Become a Volunteer</a>
-                    </div>
-                    <div class="volunteer-image">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Community Volunteers">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="projects-grid">
 
-        <!-- Project Timeline -->
-        <section class="project-timeline">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Project Timeline</h2>
-                    <p>Track the progress of our major initiatives</p>
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Masjid Renovation & Beautification</h4>
+                    <span class="budget-amount">Rs. 2,500,000</span>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jan 2024</div>
-                        <div class="timeline-content">
-                            <h4>New Masjid Construction Started</h4>
-                            <p>Groundbreaking ceremony for the new masjid in Negombo East</p>
-                            <span class="timeline-status completed">Completed</span>
-                        </div>
+
+                <div class="project-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%;"></div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Mar 2024</div>
-                        <div class="timeline-content">
-                            <h4>Educational Center Planning</h4>
-                            <p>Initial planning and design phase for the new education center</p>
-                            <span class="timeline-status completed">Completed</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jun 2024</div>
-                        <div class="timeline-content">
-                            <h4>Main Masjid Renovation</h4>
-                            <p>Renovation of main prayer hall and facilities begins</p>
-                            <span class="timeline-status in-progress">In Progress</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Aug 2024</div>
-                        <div class="timeline-content">
-                            <h4>Community Library Setup</h4>
-                            <p>Establishment of Islamic literature and learning resources</p>
-                            <span class="timeline-status upcoming">Upcoming</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Oct 2024</div>
-                        <div class="timeline-content">
-                            <h4>Youth Center Development</h4>
-                            <p>Construction of dedicated space for youth activities</p>
-                            <span class="timeline-status upcoming">Upcoming</span>
-                        </div>
-                    </div>
+                    <p class="progress-text">65% Completed</p>
+                </div>
+
+                <div class="project-details">
+                    <p>
+                        Improving the masjid interior, new carpets, lighting upgrades,
+                        and general maintenance to enhance the prayer environment.
+                    </p>
+                </div>
+
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Started: Jan 2024</span>
+                    <span><i class="fas fa-user"></i> Project Lead: Masjid Committee</span>
                 </div>
             </div>
-        </section>
-    </main>
-    
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Educational Center Development</h4>
+                    <span class="budget-amount">Rs. 1,800,000</span>
+                </div>
+
+                <div class="project-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%;"></div>
+                    </div>
+                    <p class="progress-text">45% Completed</p>
+                </div>
+
+                <div class="project-details">
+                    <p>
+                        Construction of new classrooms for Qur'an learning, Islamic studies,
+                        and youth educational programs for boys and girls.
+                    </p>
+                </div>
+
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Started: Oct 2023</span>
+                    <span><i class="fas fa-user"></i> Project Lead: Education Committee</span>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Janaza Service Improvements</h4>
+                    <span class="budget-amount">Rs. 950,000</span>
+                </div>
+
+                <div class="project-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                    <p class="progress-text">80% Completed</p>
+                </div>
+
+                <div class="project-details">
+                    <p>
+                        Upgrading Janaza vehicle, adding better storage facilities,
+                        and enhancing the service to meet community needs.
+                    </p>
+                </div>
+
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Started: Aug 2024</span>
+                    <span><i class="fas fa-user"></i> Project Lead: Welfare Committee</span>
+                </div>
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Masjid Digital Management System</h4>
+                    <span class="budget-amount">Rs. 600,000</span>
+                </div>
+
+                <div class="project-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%;"></div>
+                    </div>
+                    <p class="progress-text">30% Completed</p>
+                </div>
+
+                <div class="project-details">
+                    <p>
+                        Creating an online platform for registrations, applications, donations,
+                        announcements, and masjid management tools.
+                    </p>
+                </div>
+
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Started: Nov 2024</span>
+                    <span><i class="fas fa-user"></i> Project Lead: IT Committee</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMMUNITY PROJECTS ===== -->
+<section class="financial-reports">
+    <div class="container">
+
+        <h2 class="section-title">Community Support Projects</h2>
+
+        <div class="reports-grid">
+
+            <!-- SUPPORT 1 -->
+            <div class="report-card">
+                <div class="report-icon"><i class="fas fa-hands-helping"></i></div>
+                <div class="report-content">
+                    <h4>Zakat Distribution Program</h4>
+                    <p>Providing financial help to poor families and individuals in need of essential support.</p>
+                    <a href="zakath-application.html" class="download-btn">
+                        <i class="fas fa-file-alt"></i> Apply Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- SUPPORT 2 -->
+            <div class="report-card">
+                <div class="report-icon"><i class="fas fa-utensils"></i></div>
+                <div class="report-content">
+                    <h4>Monthly Food Distribution</h4>
+                    <p>Monthly dry ration packs for needy families across the community.</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+
+            <!-- SUPPORT 3 -->
+            <div class="report-card">
+                <div class="report-icon"><i class="fas fa-wheelchair"></i></div>
+                <div class="report-content">
+                    <h4>Senior & Disabled Assistance</h4>
+                    <p>Support for elderly and disabled individuals including medical help and caregiving.</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="financial-contact">
+    <div class="container">
+        <div class="contact-card">
+
+            <div class="contact-content">
+                <h3>Have Questions About These Projects?</h3>
+                <p>
+                    If you want more information or wish to contribute,
+                    please contact the Masjid Development Committee.
+                </p>
+
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +94 77 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> development@ngm.lk</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Negombo Grand Masjid, Main Street</p>
+                </div>
+            </div>
+
+            <div class="contact-action">
+                <a href="donate.html" class="btn-primary">Contribute to a Project</a>
+            </div>
+
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer>
         <div class="container">

@@ -69,209 +69,188 @@
         </nav>
     </header>
  
-    
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="gallery-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Event Gallery</h1>
-                    <p>Memorable moments from our community events and activities</p>
-                    <div class="gallery-stats">
-                        <div class="stat">
-                            <span class="stat-number" id="totalEvents">50+</span>
-                            <span class="stat-label">Events Captured</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" id="totalPhotos">1200+</span>
-                            <span class="stat-label">Photos & Videos</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" id="years">5</span>
-                            <span class="stat-label">Years of Memories</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Filter -->
-        <section class="gallery-filter">
-            <div class="container">
-                <div class="filter-container">
-                    <h3>Filter Events</h3>
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">All Events</button>
-                        <button class="filter-btn" data-filter="religious">Religious</button>
-                        <button class="filter-btn" data-filter="community">Community</button>
-                        <button class="filter-btn" data-filter="educational">Educational</button>
-                        <button class="filter-btn" data-filter="social">Social</button>
-                        <button class="filter-btn" data-filter="charity">Charity</button>
-                    </div>
-                    <div class="view-options">
-                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
-                        <button class="view-btn" data-view="masonry"><i class="fas fa-th-large"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Grid -->
-        <section class="gallery-section">
-            <div class="container">
-                <div class="gallery-grid" id="galleryContainer" data-view="grid">
-                    <!-- Gallery items will be dynamically loaded here -->
-                </div>
-                
-                <div class="load-more">
-                    <button id="loadMoreBtn" class="btn btn-primary">Load More Events</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Events -->
-        <section class="featured-events">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Featured Events</h2>
-                    <p>Highlights from our most memorable community gatherings</p>
-                </div>
-                <div class="featured-slider">
-                    <div class="slider-container">
-                        <div class="slider-track" id="sliderTrack">
-                            <!-- Featured event slides will be dynamically loaded here -->
-                        </div>
-                    </div>
-                    <div class="slider-nav">
-                        <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Upcoming Events -->
-        <section class="upcoming-events">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Upcoming Events</h2>
-                    <p>Join us for these exciting upcoming activities</p>
-                </div>
-                <div class="events-list">
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">15</span>
-                            <span class="date-month">DEC</span>
-                        </div>
-                        <div class="event-details">
-                            <h3>Eid Milad-un-Nabi Celebration</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> Main Prayer Hall</p>
-                            <p><i class="fas fa-clock"></i> 6:00 PM - 9:00 PM</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="#" class="btn btn-outline">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">20</span>
-                            <span class="date-month">DEC</span>
-                        </div>
-                        <div class="event-details">
-                            <h3>Winter Charity Drive</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> Community Center</p>
-                            <p><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="#" class="btn btn-outline">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">25</span>
-                            <span class="date-month">DEC</span>
-                        </div>
-                        <div class="event-details">
-                            <h3>Quran Competition Finals</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> Education Center</p>
-                            <p><i class="fas fa-clock"></i> 2:00 PM - 6:00 PM</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="#" class="btn btn-outline">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Gallery -->
-        <section class="video-gallery">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Video Highlights</h2>
-                    <p>Relive the moments through our video collection</p>
-                </div>
-                <div class="video-grid">
-                    <div class="video-item">
-                        <div class="video-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Eid Celebration">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="video-info">
-                            <h4>Eid al-Fitr Celebration 2023</h4>
-                            <p>Beautiful moments from our community Eid celebration</p>
-                            <span class="video-duration">15:30</span>
-                        </div>
-                    </div>
-                    <div class="video-item">
-                        <div class="video-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Community Iftar">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="video-info">
-                            <h4>Community Iftar Gathering</h4>
-                            <p>Ramadan iftar with hundreds of community members</p>
-                            <span class="video-duration">08:45</span>
-                        </div>
-                    </div>
-                    <div class="video-item">
-                        <div class="video-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Youth Program">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="video-info">
-                            <h4>Youth Leadership Program</h4>
-                            <p>Highlights from our annual youth development program</p>
-                            <span class="video-duration">12:20</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <span class="lightbox-close">&times;</span>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-info">
-                <h3 id="lightbox-title"></h3>
-                <p id="lightbox-description"></p>
-                <div class="lightbox-nav">
-                    <button id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-                    <button id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </div>
+        <!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+    <div class="container">
+        <h1>Event Gallery</h1>
+        <p>Moments captured from Masjid programs, activities, and community events</p>
     </div>
+</section>
+
+<!-- ===== GALLERY FILTERS ===== -->
+<section class="event-gallery">
+    <div class="container">
+
+        <h2 class="section-title">Photo Gallery</h2>
+
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="religious">Religious</button>
+            <button class="filter-btn" data-filter="youth">Youth Events</button>
+            <button class="filter-btn" data-filter="charity">Charity Projects</button>
+            <button class="filter-btn" data-filter="education">Education</button>
+        </div>
+
+        <!-- ===== GALLERY GRID ===== -->
+        <div class="gallery-grid">
+
+            <!-- Religious Event -->
+            <div class="gallery-item religious">
+                <img src="https://via.placeholder.com/500x350?text=Jummah+Program" alt="">
+            </div>
+
+            <div class="gallery-item religious">
+                <img src="https://via.placeholder.com/500x350?text=Mawlid+Event" alt="">
+            </div>
+
+            <!-- Youth -->
+            <div class="gallery-item youth">
+                <img src="https://via.placeholder.com/500x350?text=Youth+Quran+Competition" alt="">
+            </div>
+
+            <div class="gallery-item youth">
+                <img src="https://via.placeholder.com/500x350?text=Youth+Halaqa" alt="">
+            </div>
+
+            <!-- Charity -->
+            <div class="gallery-item charity">
+                <img src="https://via.placeholder.com/500x350?text=Charity+Distribution" alt="">
+            </div>
+
+            <div class="gallery-item charity">
+                <img src="https://via.placeholder.com/500x350?text=Medical+Camp" alt="">
+            </div>
+
+            <!-- Education -->
+            <div class="gallery-item education">
+                <img src="https://via.placeholder.com/500x350?text=Madrasa+Class" alt="">
+            </div>
+
+            <div class="gallery-item education">
+                <img src="https://via.placeholder.com/500x350?text=Children+Islamic+Program" alt="">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== LIGHTBOX MODAL ===== -->
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<!-- ===== GALLERY JS ===== -->
+<script>
+// FILTER BUTTONS
+const filterBtns = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        document.querySelector(".filter-btn.active").classList.remove("active");
+        btn.classList.add("active");
+
+        const filter = btn.getAttribute("data-filter");
+
+        galleryItems.forEach(item => {
+            if (filter === "all" || item.classList.contains(filter)) {
+                item.style.display = "block";
+                item.style.opacity = 1;
+            } else {
+                item.style.display = "none";
+                item.style.opacity = 0;
+            }
+        });
+    });
+});
+
+// LIGHTBOX
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeLightbox = document.querySelector(".close-lightbox");
+
+document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+    });
+});
+
+closeLightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+</script>
+
+<!-- ===== GALLERY CSS (ADD TO style.css OR KEEP HERE) ===== -->
+<style>
+.gallery-filters {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+</style>
+    
     
     <!-- Footer -->
     <footer>

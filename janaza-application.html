@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negombo Grand Masjid - Marriage Application</title>
+    <title>Negombo Grand Masjid - Janaza Application</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -73,8 +73,8 @@
     <!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
     <div class="container">
-        <h1>Marriage Application</h1>
-        <p>Submit your Nikah application to the Negombo Grand Masjid</p>
+        <h1>Janaza Application</h1>
+        <p>Submit details for Janaza support and funeral arrangements</p>
     </div>
 </section>
 
@@ -82,164 +82,140 @@
 <section class="registration-intro">
     <div class="container">
         <div class="intro-card">
-            <i class="fas fa-heart"></i>
-            <h2>Nikah Registration</h2>
+            <i class="fas fa-dove"></i>
+            <h2>Janaza Assistance</h2>
             <p>
-                The Masjid oversees Nikah ceremonies according to Islamic guidelines. 
-                Please complete the form carefully with accurate information for both the bride and groom.
-                Our team will review your application and contact you for the next steps.
+                During this difficult time, the Masjid provides full support for Janaza procedures, 
+                Ghusl arrangements, burial guidance, and coordination with the cemetery. 
+                Please fill the form carefully with accurate information.
             </p>
         </div>
     </div>
 </section>
 
-<!-- ===== MARRIAGE APPLICATION FORM ===== -->
+<!-- ===== JANAZA APPLICATION FORM ===== -->
 <section class="family-registration-form">
     <div class="container">
-        <h2 class="section-title">Groom's Information</h2>
+        <h2 class="section-title">Deceased Person's Details</h2>
 
         <form action="#" method="POST" class="form-container">
 
-            <!-- GROOM DETAILS -->
+            <!-- DECEASED DETAILS -->
             <div class="form-section">
-                <h3>Groom Details</h3>
+                <h3>Personal Information of the Deceased</h3>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" name="groom_name" required>
+                        <label>Full Name of the Deceased</label>
+                        <input type="text" name="deceased_name" required>
                     </div>
 
                     <div class="form-group">
                         <label>NIC Number</label>
-                        <input type="text" name="groom_nic" required>
+                        <input type="text" name="deceased_nic">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Date of Birth</label>
-                        <input type="date" name="groom_dob" required>
+                        <label>Age</label>
+                        <input type="number" name="deceased_age" required>
                     </div>
 
+                    <div class="form-group">
+                        <label>Date of Death</label>
+                        <input type="date" name="death_date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Cause of Death (if known)</label>
+                    <input type="text" name="death_cause">
+                </div>
+
+                <div class="form-group">
+                    <label>Address of the Deceased</label>
+                    <input type="text" name="deceased_address" required>
+                </div>
+            </div>
+
+            <!-- REQUESTER DETAILS -->
+            <div class="form-section">
+                <h3>Applicant / Contact Person</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your Full Name</label>
+                        <input type="text" name="applicant_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Relationship to the Deceased</label>
+                        <input type="text" name="relationship" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="text" name="groom_phone" required>
+                        <input type="text" name="applicant_phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alternate Contact Number</label>
+                        <input type="text" name="alternate_phone">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Address</label>
-                    <input type="text" name="groom_address" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Occupation</label>
-                    <input type="text" name="groom_job">
+                    <label>Email (optional)</label>
+                    <input type="email" name="applicant_email">
                 </div>
             </div>
 
-            <!-- BRIDE DETAILS -->
+            <!-- FUNERAL DETAILS -->
             <div class="form-section">
-                <h3>Bride Details</h3>
+                <h3>Funeral Arrangements</h3>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" name="bride_name" required>
+                        <label>Preferred Janaza Time</label>
+                        <input type="time" name="janaza_time">
                     </div>
 
                     <div class="form-group">
-                        <label>NIC Number</label>
-                        <input type="text" name="bride_nic" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Date of Birth</label>
-                        <input type="date" name="bride_dob" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="text" name="bride_phone" required>
+                        <label>Preferred Janaza Location (Masjid / House)</label>
+                        <input type="text" name="janaza_location">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Address</label>
-                    <input type="text" name="bride_address" required>
+                    <label>Place of Burial</label>
+                    <input type="text" name="burial_place" placeholder="Example: Negombo Muslim Burial Grounds">
                 </div>
 
                 <div class="form-group">
-                    <label>Occupation</label>
-                    <input type="text" name="bride_job">
-                </div>
-            </div>
-
-            <!-- MARRIAGE DETAILS -->
-            <div class="form-section">
-                <h3>Marriage Details</h3>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Preferred Nikah Date</label>
-                        <input type="date" name="nikah_date" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Preferred Time</label>
-                        <input type="time" name="nikah_time" required>
-                    </div>
+                    <label>Is Ghusl required?</label>
+                    <select name="ghusl_required">
+                        <option value="yes">Yes</option>
+                        <option value="no">No (Already Performed)</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label>Location of Nikah (Masjid / Hall / Residence)</label>
-                    <input type="text" name="nikah_location" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Mahr (Dowry) Agreement</label>
-                    <input type="text" name="mahr" placeholder="Example: Rs. 25,000">
-                </div>
-            </div>
-
-            <!-- WITNESSES -->
-            <div class="form-section">
-                <h3>Witnesses Information</h3>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Witness 1 Name</label>
-                        <input type="text" name="wit1_name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Witness 1 Phone</label>
-                        <input type="text" name="wit1_phone" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Witness 2 Name</label>
-                        <input type="text" name="wit2_name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Witness 2 Phone</label>
-                        <input type="text" name="wit2_phone" required>
-                    </div>
+                    <label>Do you need transport for the Janaza?</label>
+                    <select name="transport_required">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
             </div>
 
             <!-- NOTES -->
             <div class="form-section">
                 <h3>Additional Notes</h3>
-
                 <div class="form-group">
-                    <label>Any special requests or comments?</label>
+                    <label>Any special requests or information?</label>
                     <textarea name="notes" rows="4"></textarea>
                 </div>
             </div>
@@ -255,27 +231,27 @@
     </div>
 </section>
 
-<!-- ===== INFO SECTION ===== -->
+<!-- ===== SUPPORT INFO SECTION ===== -->
 <section class="registration-info">
     <div class="container">
         <div class="info-grid">
 
             <div class="info-card">
-                <i class="fas fa-mosque"></i>
-                <h3>Nikah Guidelines</h3>
-                <p>Please ensure all information matches your official documents.</p>
+                <i class="fas fa-hands-helping"></i>
+                <h3>Complete Assistance</h3>
+                <p>The Masjid team will guide your family through all Janaza procedures.</p>
             </div>
 
             <div class="info-card">
-                <i class="fas fa-id-card"></i>
-                <h3>Required Documents</h3>
-                <p>Both NIC copies, two witness NIC copies, and Mahr agreement.</p>
+                <i class="fas fa-file-alt"></i>
+                <h3>Required Information</h3>
+                <p>Provide accurate details for a smooth and respectful process.</p>
             </div>
 
             <div class="info-card">
-                <i class="fas fa-phone-alt"></i>
-                <h3>Need Assistance?</h3>
-                <p>Contact the Masjid office for help or clarifications.</p>
+                <i class="fas fa-phone"></i>
+                <h3>Emergency Support</h3>
+                <p>Contact us anytime for Janaza-related urgent assistance.</p>
             </div>
 
         </div>
