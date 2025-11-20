@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Gallery - Negombo Grand Masjid</title>
-    <link rel="stylesheet" href="event-gallery.css">
+    <title>Negombo Grand Masjid - Event Gallery</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -25,41 +25,50 @@
                 </div>
             </div>
         </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="HTML/leadership.html">Leadership</a></li>
+                    <li class="dropdown">
+                        <a href="HTML/services.html">Our Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="HTML/Our-Services/member-application.html">Member Application</a></li>
+                            <li><a href="HTML/Our-Services/family-registration.html">Register My Family</a></li>
+                            <li><a href="HTML/Our-Services/zakath-application.html">Zakath Application</a></li>
+                            <li><a href="HTML/Our-Services/marriage-application.html">Marriage Application</a></li>
+                            <li><a href="HTML/Our-Services/janaza-application.html">Janaza Application</a></li>
+                            <li><a href="HTML/Our-Services/bitulmahal.html">Bitumahal Application</a></li>
+                            <li><a href="HTML/Our-Services/character-certificate.html">Character Certificate</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="HTML/masjids.html">Our Masjids</a></li>
+                    <li class="dropdown">
+                        <a href="HTML/events.html">Events <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="HTML/Event/upcoming-events.html">Upcoming Events</a></li>
+                            <li><a href="HTML/Event/event-gallery.html">Event Gallery</a></li>
+                            <li><a href="HTML/Event/ongoing-projects.html">Ongoing Projects</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="HTML/about.html">About Us</a></li>
+                    <li><a href="HTML/contact.html">Contact</a></li>
+                    <li><a href="HTML/feedback.html">Feedback</a></li>
+                </ul>
+                <!-- <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div> -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
     </header>
-    
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="leadership.html">Leadership</a></li>
-                <li class="dropdown">
-                    <a href="services.html">Our Services <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="member-application.html">Member Application</a></li>
-                        <li><a href="family-registration.html">Register My Family</a></li>
-                        <li><a href="zakath-application.html">Zakath Application</a></li>
-                        <li><a href="marriage-application.html">Marriage Application</a></li>
-                        <li><a href="janaza-application.html">Janaza Application</a></li>
-                    </ul>
-                </li>
-                <li><a href="masjids.html">Our Masjids</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-            <div class="auth-buttons">
-                <a href="login.html" class="btn-login">Login</a>
-                <a href="register.html" class="btn-register">Register</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>  
+ 
     
     <!-- Main Content -->
     <main>
@@ -284,25 +293,25 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="masjids.html">Our Masjids</a></li>
-                        <li><a href="events.html">Events</a></li>
+                        <li><a href="HTML/leadership.html">Leadership</a></li>
+                        <li><a href="HTML/masjids.html">Our Masjids</a></li>
+                        <li><a href="HTML/events.html">Events</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="member-application.html">Member Application</a></li>
-                        <li><a href="family-registration.html">Family Registration</a></li>
-                        <li><a href="zakath-application.html">Zakath Application</a></li>
-                        <li><a href="marriage-application.html">Marriage Services</a></li>
+                        <li><a href="HTML/Our-services/member-application.html">Member Application</a></li>
+                        <li><a href="HTML/Our-services/family-registration.html">Family Registration</a></li>
+                        <li><a href="HTML/Our-services/zakath-application.html">Zakath Application</a></li>
+                        <li><a href="HTML/Our-services/marriage-application.html">Marriage Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <p><i class="fas fa-map-marker-alt"></i> 123 Grand Mosque Rd, Negombo</p>
                     <p><i class="fas fa-phone"></i> +94 31 223 4567</p>
-                    <p><i class="fas fa-envelope"></i> events@negombomasjid.org</p>
+                    <p><i class="fas fa-envelope"></i> info@negombomasjid.org</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -311,6 +320,15 @@
         </div>
     </footer>
 
-    <script src="event-gallery.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Set current month in calendar header
+        document.addEventListener('DOMContentLoaded', function() {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+            const currentMonth = new Date().getMonth();
+            document.getElementById('currentMonth').textContent = months[currentMonth];
+        });
+    </script>
 </body>
 </html>
